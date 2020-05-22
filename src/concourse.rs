@@ -116,7 +116,7 @@ impl Concourse {
         team: &str,
         pipeline: &str,
         job: &str,
-        build: u32,
+        build: &str,
         debug: bool,
     ) -> Option<Build> {
         reqwest::Url::parse(&format!(

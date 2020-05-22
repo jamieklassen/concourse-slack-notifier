@@ -314,7 +314,7 @@ impl SlackNotifier {
                         .map(String::as_ref)
                         .unwrap_or(""),
                     metadata.job_name.as_ref().map(String::as_ref).unwrap_or(""),
-                    metadata.name.unwrap_or(1) - 1,
+                    metadata.name,
                 );
             }
 
@@ -326,7 +326,7 @@ impl SlackNotifier {
                     .map(String::as_ref)
                     .unwrap_or(""),
                 metadata.job_name.as_ref().map(String::as_ref).unwrap_or(""),
-                metadata.name.unwrap_or(1) - 1,
+                metadata.name.as_ref().map(String::as_ref).unwrap_or(""),
                 source.debug.unwrap_or(false),
             );
 
